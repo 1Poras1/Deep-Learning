@@ -1,0 +1,54 @@
+DL_Traning_DAY2
+
+survey website: https://survey.stackoverflow.co/2025/
+ollma:- https://ollama.com/
+
+
+1.VS code
+2.Ollama - It is a framework, help to use local LLM models on local PC
+3. Install gemma2:2b Model - https://ollama.com/library/gemma2
+
+(After Ollama downloaded:-
+1.cmd -
+2.website - https://ollama.com/library/gemma2)
+
+
+
+
+Project Setup:
+
+Create a new folder than Add new Terminal 
+
+In VsCode (powershell in vscode)
+Install env - pip install virtualenv
+
+2. Creating Environment (cmd in vscode) :- python -m venv myenv
+
+3. Environment avtivate:- myenv\Scripts\activate
+
+4. In myenv create new file requirements.txt
+   langchain
+   ipykernal
+   langchan_community
+   pypdf
+   langchain-text-spitters
+   sentence_transformers
+   langchain_huggingface
+   faiss-cpu
+   streamlit
+   landchain-ollama
++Install them one by one in Terminal (cmd)
+
+Rag Doc:https: //docs.langchain.com/oss/python/deepagents/rag
+
+Install Jupter from extension (in VScode)
+
+Than, create ipynb - RAGTutorial.ipynb
+
+Select env from kernel in corner
+
+API - all-MiniLM-L6-v2 (hugging face)
+
+
+
+
