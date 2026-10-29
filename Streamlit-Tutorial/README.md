@@ -1,4 +1,4 @@
-﻿# Practical 3: Streamlit Tutorial
+﻿# Streamlit Tutorial
 
 ## Objective
 To learn the basic functionalities of Streamlit and build an interactive web application using Python.
