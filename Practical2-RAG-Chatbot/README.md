@@ -1,4 +1,4 @@
-# Practical 2: RAG Chatbot with Streamlit, Ollama, and Gemma 2B
+# RAG Chatbot with Streamlit, Ollama, and Gemma 2B
 
 ## Overview
 
@@ -22,18 +22,15 @@ chunks for a question, and asks Ollama's `gemma:2b` model to answer using that c
 - Your original `Attention.txt` document.
 
 ## Setup (Windows PowerShell)
-
 Open PowerShell in this project folder.
 
 1. Create and activate a virtual environment (skip if you are using your existing training environment):
-
    ```powershell
    python -m venv .venv
    .\.venv\Scripts\Activate.ps1
    ```
 
 2. Install dependencies:
-
    ```powershell
    python -m pip install --upgrade pip
    pip install -r requirements.txt
@@ -42,19 +39,16 @@ Open PowerShell in this project folder.
 3. Copy your original `Attention.txt` into this folder, next to `app.py`.
 
 4. In a terminal, download Gemma 2B with Ollama:
-
    ```powershell
    ollama pull gemma:2b
    ```
 
    You can check the model is available with:
-
    ```powershell
    ollama list
    ```
 
 5. Start the Streamlit app:
-
    ```powershell
    python -m streamlit run app.py
    ```
@@ -73,28 +67,5 @@ Open PowerShell in this project folder.
 8. Streamlit displays the answer and offers an expander to inspect the retrieved context.
 
 The first run may download the Hugging Face embedding model. Internet access may be required for that initial download.
-
-## Troubleshooting
-
-- **`Attention.txt` not found:** put the exact file in the same folder as `app.py`.
-- **Ollama/model error:** start Ollama and run `ollama pull gemma:2b`; check `ollama list`.
-- **Missing Python package:** activate the intended environment and run `pip install -r requirements.txt`.
-- **First launch is slow:** the embedding model may be downloading and the FAISS index is being created.
-- **PowerShell blocks virtual-environment activation:** use the Python environment already configured for your training, or follow your institution's approved PowerShell policy rather than changing security settings blindly.
-
-## Viva questions
-
-1. What is Retrieval-Augmented Generation (RAG)?
-2. What is the role of a text splitter?
-3. What are embeddings?
-4. Why is FAISS used?
-5. What does `similarity_search(question, k=4)` do?
-6. What is the difference between retrieval and generation?
-7. What is the role of Ollama?
-8. Why is the retrieved context included in the prompt?
-9. Why might the chatbot say the answer is not in the document?
-10. Why should the source document be kept with the project?
-
-## Important
 
 The notebook and app expect `Attention.txt`, but that text file was not part of the uploaded notebook. Add your actual file before running the app. Do not upload private or restricted source material to a public repository.
